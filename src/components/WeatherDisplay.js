@@ -2,7 +2,7 @@ import React from "react";
 
 function WeatherDisplay({ data }) {
   return (
-    <div style={{}}>
+    <div>
       <p
         style={{
           fontSize: "20px",
