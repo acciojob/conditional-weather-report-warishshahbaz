@@ -7,7 +7,7 @@ function WeatherDisplay({ data }) {
         style={{
           fontSize: "20px",
           fontWeight: "bold",
-          color: data.temperature > 20 ? `blue` : `red`,
+          color: data.temperature <= 20 ? `blue` : `red`,
         }}
       >
         {data.temperature}
