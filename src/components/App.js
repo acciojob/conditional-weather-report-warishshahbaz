@@ -1,24 +1,22 @@
-// App.js
 import React, { useState, useEffect } from "react";
+import './../styles/App.css';
 import WeatherDisplay from "./WeatherDisplay";
-
-function App() {
+ 
+const App = () => {
   const [weatherData, setWeatherData] = useState({
     temperature: 0,
-    conditions: "",
+    conditions: ""
   });
-
+ 
   useEffect(() => {
-    // Fetch weather data from API or use default values
-    const defaultWeatherData = { temperature: 25, conditions: "Sunny" };
-    setWeatherData(defaultWeatherData);
+    setWeatherData({ temperature: 25, conditions: "Sunny" });
   }, []);
-
+ 
   return (
-    <div className="App">
-      <WeatherDisplay data={weatherData} />
+    <div>
+      <WeatherDisplay weatherData={weatherData} />
     </div>
   );
-}
-
+};
+ 
 export default App;
