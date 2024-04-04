@@ -17,9 +17,9 @@ function WeatherDisplay({ data }) {
           color: data.temperature <= 20 ? `blue` : `red`,
         }}
       >
-        Temperature : {data.temperature}
+        Temperature: {data.temperature}
       </p>
-      <p>Conditions : {data.conditions}</p>
+      <p>Conditions: {data.conditions}</p>
     </div>
   );
 }
