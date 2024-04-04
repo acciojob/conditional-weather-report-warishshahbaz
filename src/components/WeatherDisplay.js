@@ -3,13 +3,13 @@ import React from "react";
 function WeatherDisplay({ data }) {
   return (
     <div>
-      <p
+      <span
         style={{
           width: "100px",
           height: "20px",
           backgroundColor: data.Temperature <= 20 ? `blue` : `red`,
         }}
-      ></p>
+      ></span>
       <p
         style={{
           fontSize: "20px",
@@ -19,7 +19,7 @@ function WeatherDisplay({ data }) {
       >
         {data.Temperature}
       </p>
-      <span>{data.conditions}</span>
+      <p>{data.Conditions}</p>
     </div>
   );
 }
