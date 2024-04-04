@@ -7,10 +7,10 @@ function WeatherDisplay({ data }) {
         style={{
           fontSize: "20px",
           fontWeight: "bold",
-          color: data.Temperature <= 20 ? `blue` : `red`,
+          color: data.temperature <= 20 ? `blue` : `red`,
         }}
       >
-        {data.Temperature}
+        {data.temperature}
       </p>
       <span>{data.conditions}</span>
     </div>
