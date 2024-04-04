@@ -1,24 +1,25 @@
-// WeatherDisplay.js
 import React from "react";
 
-function WeatherDisplay({ weather }) {
-  const temperatureStyle = {
-    color: weather.temperature > 20 ? rgb(255, 0, 0) : "blue",
-  };
-  const temperatureStyleBG = {
-    backgroundColor: weather.temperature > 20 ? rgb(255, 0, 0) : "blue",
-  };
+function WeatherDisplay({ data }) {
   return (
     <div>
       <span
         style={{
-          backgroundColor: weather.temperature > 20 ? rgb(255, 0, 0) : "blue",
-          width: "50px",
-          height: "50px",
+          width: "100px",
+          height: "20px",
+          backgroundColor: data.temperature <= 20 ? `blue` : `red`,
         }}
       ></span>
-      <p style={temperatureStyle}>Temperature: {weather.temperature}</p>
-      <p>Conditions: {weather.conditions}</p>
+      <p
+        style={{
+          fontSize: "20px",
+          fontWeight: "bold",
+          color: data.temperature <= 20 ? `blue` : `red`,
+        }}
+      >
+        Temperature : {data.temperature}
+      </p>
+      <p>Conditions : {data.conditions}</p>
     </div>
   );
 }
